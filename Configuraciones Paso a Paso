@@ -1,0 +1,112 @@
+PROTECTO DE REDES DE COMPUTADORAS
+PACKET TRACER DE CISCO
+CONFIGURAR UNA RED BÁSICA CON 
+3 SEGMENTOS DE RED.
+
+Objetivo:
+Enseñar a los estudiantes la configuración en packet tracert
+los equipos de red en tres segmentos de red diferentes.
+
+Nota: Los Routers ya tienen instalado el módulo HWIC-2T
+
+================
+CONFIGURACIONES
+================
+
+=======
+ROUTER0
+=======
+COMENTARIO: (configura interface gigabit) Subred 192.168.1.0/24
+=======
+
+ena
+conf t
+interface gigabit0/0
+ip address 192.168.1.1
+no shut
+do write
+exit
+
+=======
+COMENTARIO:(configura interface serial derecha)
+=======
+
+interface serial0/0/0
+ip address 192.168.4.1 255.255.255.0
+no shut
+do write
+exit
+
+=======
+ROUTER1
+=======
+
+=======
+COMENTARIO: (configura interface Gigabit para LAN) Subred 192.168.2.0/24
+======= 
+
+ena
+conf t
+interface gigabit0/0
+ip address 192.168.2.1 255.255.255.0
+no shut
+do write
+exit
+
+=======
+COMENTARIO: (configura interface serial izquierda)
+=======
+
+interface serial0/0/0
+ip address 192.168.4.2 255.255.255.0 
+no shut
+do write
+exit
+
+=======
+COMENTARIO: (configura interface serial derecha)
+=======
+
+interface serial0/0/1   
+ip adrees 192.168.5.1 255.255.255.0 
+no shut
+do write
+exit
+
+=======
+ROUTER2
+=======
+
+=======
+COMENTARIO: (configura interface Gigabit para LAN) Subred 192.168.3.0/24
+=======
+
+interface gigabit0/0
+ip address 192.168.3.1 255.255.255.0
+no shut
+do write
+exit
+
+=======
+COMENTARIO: (configura interface serial izquierda)
+=======
+
+interface serial0/0/0
+ip address 192.168.5.2 255.255.255.0
+no shut
+do write
+exit
+
+
+======================
+CONFIGURAR PCS
+======================
+1. Debes configurar cada PC en su segmento de red
+2. Utiliza IP estático en cada PC de acuerdo a su segmento de red
+3. Ejemplo: IP Estático, Subnet, Gateway
+
+
+======================
+Felicidades
+Ing. Pablo palacios
+======================
